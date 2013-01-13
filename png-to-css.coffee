@@ -31,6 +31,8 @@ class PngToCss
       @options.onError.call this, e, 'load' if @options.onError?
   
   convert: (imgPath) ->
+    @ctx.clearRect 0, 0, @tCanvas.width, @tCanvas.height
+    
     if /\.png$/i.test(imgPath)
       @tImg.src = imgPath
     else
