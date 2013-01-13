@@ -1,1 +1,227 @@
-My GitHub Page
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400' type='text/css'>
+    <link rel="stylesheet" href="public/stylesheets/reset.css" type="text/css" media="screen, projection, print" />
+    <link rel="stylesheet" href="public/stylesheets/screen.css" type="text/css" media="screen, projection" />
+    
+    <script type="text/javascript" src="public/javascripts/mootools-core.js"></script>
+    <script type="text/javascript" src="public/javascripts/mootools-more.js"></script>
+    <script type="text/javascript" src="https://raw.github.com/marcinwieprzkowicz/png-to-css/master/png-to-css.js"></script>
+    
+    <title>PNG to CSS</title>
+  </head>
+  <body>
+    <div id="body-wrapper">
+      <div id="header">
+        <div class="mCont">
+          <h1>
+            <a href="https://github.com/marcinwieprzkowicz/png-to-css" title="Png to css">
+              <strong>Png</strong> to <strong>css</strong>
+            </a>
+          </h1>
+        </div>
+      </div>
+      
+      <div id="main-content">
+        <div class="mCont">
+          <ul id="nav">
+            <li>
+              <a href="#setup" title="Setup">Setup</a>
+            </li>
+            <li>
+              <a href="#demo" title="Demo">Demo</a>
+            </li>
+            <li>
+              <a href="https://github.com/marcinwieprzkowicz/png-to-css/zipball/master" title="Download">Download</a>
+            </li>
+            <li>
+              <a href="#events" title="Events">Events</a>
+            </li>
+            <li>
+              <a href="#requirements" title="Requirements">Requirements</a>
+            </li>
+            <li>
+              <a href="#license" title="License">License</a>
+            </li>
+          </ul> <!-- /nav -->
+          
+          <div id="primary-cont">
+            <div class="section" id="setup">
+              <h2>Setup</h2>
+              
+              <div class="code">
+                <div class="snippet withBorder">
+                  <h3>CoffeeScript</h3>
+<pre>
+png = new PngToCss(
+  onReturn: (result) ->
+    console.log result
+  
+  onError: (error, type) ->
+    console.error error, type
+)
+png.convert "image.png"
+</pre>
+                </div> <!-- /snippet -->
+                
+                <div class="snippet">
+                  <h3>JavaScript</h3>
+<pre>
+var png = new PngToCss({
+  onReturn: function(result){
+    console.log(result);
+  },
+  onError: function(error, type){
+    console.error(error, type);
+  }
+});
+png.convert('image.png');
+</pre>
+                </div> <!-- /snippet -->
+              </div> <!-- /code -->
+              
+              <div class="code">
+                <div class="snippet">
+                  <h3>Css</h3>
+<pre>
+.selector {
+  font-size: 1px;
+  height: 1em;
+  width: 1em;
+}
+</pre>
+                </div> <!-- /snippet -->
+              </div> <!-- /code -->
+              
+            </div> <!-- /section -->
+            
+            <div class="section" id="demo">
+              <h2>Demo</h2>
+              <p>Click one of the links below.</p>
+              
+              <div id="demo">
+                <ul class="examples">
+                  <li>
+                    - <a href="#" title="Load MegaMan image" class="load" data-path="public/images/demo-01.png">Load MegaMan image</a>
+                  </li>
+                  <li>
+                    - <a href="#" title="Load Mario image" class="load" data-path="public/images/demo-02.png">Load Mario image</a>
+                  </li>
+                  <li>
+                    - <a href="#" title="Scale @2" class="scale" data-scale="2">Scale @2</a>
+                  </li>
+                  <li>
+                    - <a href="#" title="Scale @3" class="scale" data-scale="3">Scale @3</a>
+                  </li>
+                  <li>
+                    - <a href="#" title="Reset scale" class="scale" data-scale="1">Reset scale</a>
+                  </li>
+                  <li>
+                    - <a href="#" title="Load invalid path to image" class="load" data-path="public/images/invalid-path.png">Load invalid path to image</a>
+                  </li>
+                  <li>
+                    - <a href="#" title="Load invalid image format" class="load" data-path="public/images/invalid-format.jpg">Load invalid image format</a>
+                  </li>
+                </ul> <!-- /demo -->
+                
+                <div class="result">
+                  <div class="resultCont">
+                    <h3>Effect:</h3>
+                    <div class="pngToCss"></div>
+                  </div>
+                  
+                  <div class="outputCont">
+                    <h3>Output:</h3>
+                    <textarea class="output"></textarea>
+                  </div>
+                </div> <!-- /result -->
+              </div> <!-- /demo -->
+            </div> <!-- /section -->
+            
+            <div class="section" id="events">
+              <h2>Events</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th class="name">Name</th>
+                    <th>Provides</th>
+                    <th class="description">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="name">onReturn</td>
+                    <td>result</td>
+                    <td class="description">Fires when converted css in ready.</td>
+                  </tr>
+                  <tr>
+                    <td class="name">onError</td>
+                    <td>error, type</td>
+                    <td class="description">
+                      Fires when: <br />
+                      - path to image is invalid<br />
+                      - image format is not png
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> <!-- /section -->
+            
+            <div class="section" id="requirements">
+              <h2>Requirements</h2>
+              <p>PNG to CSS is written in CoffeeScript, and compiled into JavaScript. No need for frameworks.</p>
+            </div> <!-- /section -->
+            
+            <div class="section" id="license">
+              <h2>License</h2>
+              <p>PNG to CSS is released under an MIT License.</p>
+            </div>
+          </div> <!-- /primary-cont -->
+        </div>
+      </div> <!-- /main-content -->
+    </div> <!-- /body-wrapper -->
+    
+    <script type="text/javascript">
+      //<![CDATA[
+        new Fx.SmoothScroll({
+          links: '#nav a',
+          wheelStops: true
+        });
+        
+        var demo = document.id('demo');
+        var result = demo.getElement('.pngToCss');
+        var output = demo.getElement('.output');
+        
+        var png = new PngToCss({
+          onReturn: function(boxShadow){
+            result.setStyle('box-shadow', boxShadow);
+            output.set('value', boxShadow);
+          },
+          onError: function(error, type){
+            result.setStyle('box-shadow', '');
+            switch(type){
+              case 'load':
+                output.set('value', 'Error: Invalid path to image.');
+                break;
+              case 'format':
+                output.set('value', 'Error: Invalid image format.');
+                break;
+            }
+          }
+        });
+        
+        document.getElements('#demo .load').addEvent('click', function(event){
+          event.stop();
+          png.convert(this.get('data-path'));
+        });
+        
+        document.getElements('#demo .scale').addEvent('click', function(event){
+          event.stop();
+          result.setStyle('font-size', this.get('data-scale') + 'px');
+        });
+      //]]>
+    </script>
+  </body>
+</html>
