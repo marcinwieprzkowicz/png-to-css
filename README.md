@@ -41,13 +41,13 @@ png.convert('image.png');
   <tr>
     <td>onReturn</td>
     <td>result</td>
-    <td>Fires when converted css in ready.</td>
+    <td>Fires when converted css in ready</td>
   </tr>
   <tr>
     <td>onError</td>
     <td>error, type</td>
-    <td>Fires when:
-        - path to image is invalid
+    <td>Fires when:<br />
+        - path to image is invalid<br />
         - image format is not png
     </td>
   </tr>
