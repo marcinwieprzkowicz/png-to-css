@@ -44,8 +44,8 @@ png.convert('image.png');
     <td>Fires when converted css in ready</td>
   </tr>
   <tr>
-    <td>onError</td>
-    <td>error, type</td>
+    <td valign="top">onError</td>
+    <td valign="top">error, type</td>
     <td>Fires when:<br />
         - path to image is invalid<br />
         - image format is not png
