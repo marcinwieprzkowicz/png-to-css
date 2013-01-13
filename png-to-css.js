@@ -45,6 +45,7 @@
     }
 
     PngToCss.prototype.convert = function(imgPath) {
+      this.ctx.clearRect(0, 0, this.tCanvas.width, this.tCanvas.height);
       if (/\.png$/i.test(imgPath)) {
         return this.tImg.src = imgPath;
       } else {
