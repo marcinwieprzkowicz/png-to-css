@@ -31,6 +31,15 @@ var png = new PngToCss({
 png.convert('image.png');
 ```
 
+### Css
+```css
+.selector {
+  font-size: 1px;
+  height: 1em;
+  width: 1em;
+}
+```
+
 ## Events
 <table>
   <tr>
