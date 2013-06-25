@@ -1,9 +1,12 @@
-# 
-# Library that convert png images to css (box-shadow)
-# 
-# @version  1.1
-# @author Marcin Wieprzkowicz (marcin.wieprzkowicz@gmail.com)
-#
+###
+
+Library that convert png images to css (box-shadow)
+
+@version  1.1
+@author Marcin Wieprzkowicz (marcin.wieprzkowicz@gmail.com)
+
+####
+
 
 class PngToCss
 
